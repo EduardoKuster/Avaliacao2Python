@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sistema de Estudantes</title>
+</head>
+
+<body>  
+    <div>       
+        <h3>Pessoas</h3>
+        <a href="/listarPessoasJson">Listagem de pessoas</a></br>
+        <label>Inclusão de Pessoas</label></br>
+        <form onsubmit='event.preventDefault();'>
+            <label>nome</label>
+            <input type="text"id="nomepessoa"></br>
+            <label>cpf</label>
+            <input type="text"id="cpfpessoa"></br>
+            <label>email</label>
+            <input type="text"id="emailpessoa"></br>
+            <button id="btnInserirPessoa" type="button"  class="btn btn-success">Incluir Pessoa</button>
+        </form>
+    </div>
+    </br>
+    <div>       
+        <h3>Disciplinas</h3>
+        <a href="/listarDisciplinasJson">Listagem de disciplinas</a></br>
+        <label>Inclusão de Disciplinas</label></br>
+        <form onsubmit='event.preventDefault();'>
+            <label>nome</label>
+            <input type="text"id="nomedisciplina"></br>
+            <label>carga horária</label>
+            <input type="number"id="cargadisciplina"></br>
+            <label>ementa</label>
+            <input type="text"id="ementadisciplina"></br>
+            <button id="btnInserirDisciplina" type="button"  class="btn btn-success">Incluir Disciplina</button>
+        </form>
+    </div>
+    </br>
+    <div>       
+        <h3>Estudantes das disciplinas</h3>
+        <a href="/listarEstudantesDisciplinasJson">Listagem de estudantes nas disciplinas</a></br>
+        <label>Inclusão de estudantes nas disciplinas</label></br>
+        <form onsubmit='event.preventDefault();'>
+            <label>semestre</label>
+            <input type="number"id="semestreestudante"></br>
+            <label>pessoa</label>
+            <select id="selectPessoa"> <!-- preenche via javascript --></select></br>
+            <label>disciplina</label>
+            <select id="selectDisciplina"> <!-- preenche via javascript --></select></br>
+            <label>media final</label>
+            <input type="text"id="mediaestudante"></br>
+            <label>frequencia</label>
+            <input type="number"id="frequenciaestudante"></br>
+            <button id="btnInserirEstudanteDisciplina" type="button"  class="btn btn-success">Incluir estudante da disciplina</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+</body>
+</html>
